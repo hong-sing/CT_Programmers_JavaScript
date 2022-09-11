@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function solution(n) {
+            let x = Math.sqrt(n); //n의 제곱근. n이 121이면 x는 11
+            if (n%x==0) { //n의 제곱근 a가 정수인가?
+                return (x+1)**2;  //(x+1)의 제곱. 다른 방법 Math.pow()
+            } else {
+                return -1;
+            }
+        }//solution() end
+
+        document.write(solution(121));
+        /*
+        let n = 121;
+        // 루트n 값(x값 찾기)
+        document.write(Math.sqrt(n));
+
+        // x가 양의 정수인지?
+        let a = Math.sqrt(n); //a = 11
+        document.write(n%a==0);
+
+        // 요구값 리턴
+        let b = (a+1)**2; //다른 방법 Math.pow()
+        document.write(b);
+        */
+        
+    </script>
+</body>
+</html>
