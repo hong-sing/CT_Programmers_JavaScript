@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let n = 1234567;
+        n = n.toString();
+        let num = [];
+        
+        for (let i=0; i<n.length; i++) {
+            num[i] = n.substring(i, i+1);            
+        }//for end
+
+        for (let i=0; i<n.length/2; i++) {
+            tmp = num[i];
+            num[i] = num[n.length-(i+1)];
+            num[n.length-(i+1)] = tmp;
+        }//for end
+        */
+        
+        /**
+         * 자연수를 뒤집어 배열로 만드는 함수
+         * /@param n: 자연수
+         */
+        function solution(n) {
+            //입력받은 자연수를 문자열로 변환
+            n = n.toString();
+
+            //배열에 넣기위해 배열 선언
+            var answer = [];
+
+            //입력받은 자연수를 배열에 넣기
+            for (let i=0; i<n.length; i++) {
+                answer[i] = n.substring(i, i+1);
+            }//for end
+
+            //위치 바꾸기
+            for (let i=0; i<n.length/2; i++) {
+                tmp = answer[i];
+                answer[i] = answer[n.length-(i+1)];
+                answer[n.length-(i+1)] = tmp;
+            }//for end
+            
+            //다시 자연수로 변환
+            for (let i=0; i<n.length; i++) {
+                answer[i] = parseInt(answer[i]);
+            }//for end                       
+            
+            return answer;
+        }//solution() end     
+        
+
+    </script>
+</body>
+</html>
